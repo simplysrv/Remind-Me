@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ShowTask" >
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestureOverlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gestureColor="@color/teal"
+        android:gestureStrokeType="multiple"
+        android:uncertainGestureColor="@color/blue" >
+        
+         <LinearLayout android:id="@+id/thumbnail"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+	        android:padding="3dip">
+
+            <LinearLayout android:id="@+id/titlebox"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+	        
+		        <TextView
+		            android:id="@+id/showTaskTitle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@+id/showTaskTitle"
+		            android:textSize="50px"
+		            android:textStyle="bold" />
+		        
+		        <ImageView
+		            android:id="@+id/priority"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_toRightOf="@id/showTaskTitle"
+		            android:layout_alignParentRight="true"
+		            android:gravity="right"
+		            android:src="@drawable/ic_action_half_important"/>
+		        
+        	</LinearLayout>
+        	
+	        <TextView
+		        android:id="@+id/desc"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/titlebox"
+		        android:textSize="40px"
+		        android:layout_marginTop="1dip"
+		        android:text="@+id/desc" />
+	        
+	        <TextView
+		        android:id="@+id/date"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="right"
+		        android:layout_below="@id/desc"
+		        android:text="10/10/2013"
+		        android:layout_marginTop="1dip"
+		        android:textSize="40px" />
+	        
+	        <LinearLayout android:id="@+id/titlebox"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+		        
+		        <ImageView
+		            android:id="@+id/done"
+		            android:layout_width="fill_parent"
+		            android:layout_height="fill_parent"
+		            android:layout_toRightOf="@id/showTaskTitle"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerInParent="true"
+		            android:gravity="center"
+		            android:layout_marginTop="10dip"
+		            android:visibility="invisible"
+		            android:src="@drawable/done"/>
+	        
+	        </LinearLayout>
+	        
+	        </LinearLayout>
+    </android.gesture.GestureOverlayView>
+
+</LinearLayout>
