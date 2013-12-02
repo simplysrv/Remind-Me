@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <android.gesture.GestureOverlayView
+        android:id="@+id/gestureOverlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gestureColor="@color/teal"
+        android:gestureStrokeType="multiple"
+        android:uncertainGestureColor="@color/blue" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <!-- Email Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Task Title" />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip"
+                android:singleLine="true" />
+
+            <!-- Password Label -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Personal Note" />
+
+            <EditText
+                android:id="@+id/body"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="5dip" />
+
+            <!-- Login button -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Choose Date" />
+
+            <DatePicker
+                android:id="@+id/datePicker1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:padding="10dip" >
+	            
+                <LinearLayout
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical"
+		            android:padding="10dip" >
+		            
+                    <TextView
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginBottom="20dip"
+		                android:textStyle="bold"
+		                android:text="Task Priority" />
+	            
+		            <RatingBar
+		                android:id="@+id/ratingbar"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:numStars="3"
+		                android:rating="1"
+		                android:stepSize="1" />
+
+				</LinearLayout>
+				
+                <LinearLayout
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical"
+		            android:padding="10dip" >
+		            
+                    <TextView
+		                android:layout_width="fill_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginBottom="20dip"
+		                android:textStyle="bold"
+		                android:text="Task Category" />
+                    
+		            <RadioGroup
+		                android:id="@+id/category"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:gravity="right"
+		                android:layout_alignParentRight="true"
+		                android:orientation="horizontal" >
+		
+		                <RadioButton
+		                    android:id="@+id/radio_personal"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:checked="true"
+		                    android:text="Personal" />
+		
+		                <RadioButton
+		                    android:id="@+id/radio_corporate"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:text="Work" />
+		
+		                <RadioButton
+		                    android:id="@+id/radio_others"
+		                    android:layout_width="wrap_content"
+		                    android:layout_height="wrap_content"
+		                    android:text="Others" />
+		            </RadioGroup>
+				</LinearLayout>
+			</LinearLayout>
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:onClick="saveTask"
+                android:text="Submit Task" />
+            
+            <TextView android:id="@+id/link_to_help"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:layout_marginBottom="40dip"
+                android:text="Having Trouble?Check Tutorial"
+                android:gravity="center"
+                android:textColor="#0b84aa"/>
+
+        </LinearLayout>
+        <!-- Login Form Ends -->
+    </android.gesture.GestureOverlayView>
+
+</RelativeLayout>
